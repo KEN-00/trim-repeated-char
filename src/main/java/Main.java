@@ -10,7 +10,7 @@ public class Main {
     public static void main (String[] args) throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Input String; ");
+        System.out.println("Input String: ");
 
         String inputStr = bufferedReader.readLine();
         StringBuilder sb = new StringBuilder();
@@ -27,8 +27,8 @@ public class Main {
                 charMap.remove(prevChar);
             }
 
-            prevChar = current;
             charMap.put(current, count);
+            prevChar = current;
 
             if(!it.hasNext() && charMap.get(current) != null) {
                 sb.append(current);
@@ -36,7 +36,7 @@ public class Main {
         }
 
 
-
+        System.out.println("Output String: ");
         System.out.println(sb.toString());
     }
 
